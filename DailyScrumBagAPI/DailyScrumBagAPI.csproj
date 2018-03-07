@@ -27,4 +27,8 @@
     <Folder Include="API\Repositories\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="wwwroot\images\forestbridge.jpg" />
+  </ItemGroup>
+
 </Project>

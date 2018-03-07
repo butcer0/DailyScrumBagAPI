@@ -153,28 +153,39 @@ namespace DailyScrumBagAPI
                 mapper.CreateMap<UserItem, UserUpdateDto>().ReverseMap();
                 mapper.CreateMap<UserItem, UserCreateDto>().ReverseMap();
             });
+
+
+            app.UseStaticFiles();
+            //Erik - 3/7/2018 Use attribute routing throughout -> Attributes add Route to Routing Middleware
             app.UseMvc();
         }
-        //public void Configure(IApplicationBuilder app, IHostingEnvironment env)
-        //{
-        //    if (env.IsDevelopment())
-        //    {
-        //        app.UseBrowserLink();
-        //        app.UseDeveloperExceptionPage();
-        //    }
-        //    else
-        //    {
-        //        app.UseExceptionHandler("/Home/Error");
-        //    }
 
-        //    app.UseStaticFiles();
 
-        //    app.UseMvc(routes =>
-        //    {
-        //        routes.MapRoute(
-        //            name: "default",
-        //            template: "{controller=Home}/{action=Index}/{id?}");
-        //    });
-        //}
+        #region Depricated - 3/7/2018 Use Attribute Routing
+        /*
+             //public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+//{
+//    if (env.IsDevelopment())
+//    {
+//        app.UseBrowserLink();
+//        app.UseDeveloperExceptionPage();
+//    }
+//    else
+//    {
+//        app.UseExceptionHandler("/Home/Error");
+//    }
+
+//    app.UseStaticFiles();
+
+//    app.UseMvc(routes =>
+//    {
+//        routes.MapRoute(
+//            name: "default",
+//            template: "{controller=Home}/{action=Index}/{id?}");
+//    });
+//}
+        */
+        #endregion
+
     }
 }
